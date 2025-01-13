@@ -43,7 +43,7 @@
     "jsonwebtoken": "^9.0.2",
     "ky": "^1.7.4",
     "marked": "^15.0.3",
-    "mongoose": "^8.9.3",
+    "mongoose": "^8.9.4",
     "rate-limiter-flexible": "^5.0.4",
     "uuid": "^11.0.3"
   }
