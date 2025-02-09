@@ -3,15 +3,19 @@
 declare global {
   namespace App {
     interface Error {}
+
     interface Locals {
       loggedIn: boolean;
       year: number;
     }
+
     // interface PageData {
     //   date?: Date;
     //   year?: number;
     // }
+
     interface PageState {}
+
     interface Platform {}
   }
 
