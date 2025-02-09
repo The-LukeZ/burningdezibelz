@@ -35,26 +35,51 @@
   },
   {
     "_id": "banane3",
-    "name": "Trouid Festival",
-    "link": "https://www.trouidfest.com/",
-    "date": "2025-07-04T13:00:00.000Z",
+    "name": "",
+    "date": "2025-06-28T15:00:00.000Z",
     "location": {
       "_id": "apfel3",
-      "name": "Trouid Festival",
-      "address": "Naundorf 4",
-      "city": "Gößnitz",
-      "postalCode": "04639",
+      "name": "???",
+      "address": "???",
+      "city": "Lauchhammer",
+      "postalCode": "01979",
       "country": "Deutschland",
       "province": "Sachsen"
     },
-    "price": 25.0,
-    "tickets": "https://www.trouidfest.com/",
-    "abendkasse": false,
-    "notes": [
-      "Ticketverkauf ist noch nicht gestartet! (Stand: 03.01.25)",
-      "Tickets für Samstag an der Abendkasse",
-      "Freitags ist der Eintritt frei",
-      "Weiteres auf der Website"
-    ]
+    "notes": ["Geschlossene Veranstaltung"]
+  },
+  {
+    "_id": "banane4",
+    "name": "Rockcafe Ringkeller",
+    "link": "https://www.rockcafe-ringkeller-zwickau.de/",
+    "date": "2025-03-29T19:00:00.000Z",
+    "location": {
+      "_id": "apfel1",
+      "name": "Rockcafe Ringkeller",
+      "address": "Dr. Friedrichs-Ring 21a",
+      "city": "Zwickau",
+      "postalCode": "08058",
+      "country": "Deutschland",
+      "province": "Sachsen"
+    },
+    "abendkasse": true,
+    "price": null
+  },
+  {
+    "_id": "banane5",
+    "name": "Rockcafe Ringkeller",
+    "link": "https://www.rockcafe-ringkeller-zwickau.de/",
+    "date": "2025-12-26T19:00:00.000Z",
+    "location": {
+      "_id": "apfel1",
+      "name": "Rockcafe Ringkeller",
+      "address": "Dr. Friedrichs-Ring 21a",
+      "city": "Zwickau",
+      "postalCode": "08058",
+      "country": "Deutschland",
+      "province": "Sachsen"
+    },
+    "abendkasse": true,
+    "price": null
   }
 ]
