@@ -35,12 +35,6 @@
   },
   {
     "_id": "banane3",
-    "name": "Privat",
-    "date": "2025-06-28T15:00:00.000Z",
-    "notes": ["Geschlossene Veranstaltung"]
-  },
-  {
-    "_id": "banane4",
     "name": "Rockcafe Ringkeller",
     "link": "https://www.rockcafe-ringkeller-zwickau.de/",
     "date": "2025-03-29T19:00:00.000Z",
@@ -55,6 +49,12 @@
     },
     "abendkasse": true,
     "price": null
+  },
+  {
+    "_id": "banane4",
+    "name": "Privat",
+    "date": "2025-06-28T15:00:00.000Z",
+    "notes": ["Geschlossene Veranstaltung"]
   },
   {
     "_id": "banane5",
