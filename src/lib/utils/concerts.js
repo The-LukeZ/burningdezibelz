@@ -1,9 +1,12 @@
 import { Concert, concertSchema } from "../models/concert";
 import demoConcerts from "$lib/demo_concerts.json";
 
+/**
+ *
+ * @returns {Promise<DBModels.Concert[]>}
+ */
 export async function fetchConcerts() {
-  // return Concert.find({}, null, { sort: { date: 1 } });
-  return demoConcerts;
+  return demoConcerts.sort((a, b) => a.date.localeCompare(b.date)); // sort by date
 }
 
 export function fetchConcertById(id) {

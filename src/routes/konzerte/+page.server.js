@@ -1,3 +1,4 @@
+import { fetchConcerts } from "$lib/utils/concerts";
 import dayjs from "dayjs";
 
 export const prerender = false;
@@ -11,8 +12,7 @@ export const prerender = false;
 export async function load() {
   // TODO: load concerts from a real API
 
-  /** @type {DBModels.Concert[]} */
-  let concerts = (await import("$lib/demo_concerts.json")).default;
+  const concerts = await fetchConcerts();
   const nowTs = dayjs();
 
   return {
