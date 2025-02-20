@@ -35,7 +35,7 @@ declare global {
       name: string;
       date: string;
       link?: string;
-      location: Location;
+      location?: Location;
       /**
        * The tickets link or a string with the tickets information
        */
