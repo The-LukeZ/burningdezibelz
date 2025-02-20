@@ -187,7 +187,9 @@
 {#snippet concertDetailRow(/** @type {string} */ key, /** @type {string | Array} */ value, align = "center")}
   <tr>
     <td style="font-weight: bold; text-align: {align}; font-size: larger;">{key}</td>
-    {@html `<td style="text-align: ${align};">` + (Array.isArray(value) ? value.join("<br />") : value) + "</td>"}
+    {@html `<td style="text-align: ${align};">` +
+      (value === null ? "X" : Array.isArray(value) ? value.join("<br />") : value) +
+      "</td>"}
   </tr>
 {/snippet}
 
@@ -206,11 +208,16 @@
           </tr>
           {@render concertDetailRow("Datum", dayjs(concertData?.date).toDate().toLocaleDateString())}
           {@render concertDetailRow("Uhrzeit", dayjs(concertData?.date).toDate().toLocaleTimeString())}
-          {@render concertDetailRow("Ort", [
-            concertData?.location?.name,
-            concertData?.location?.address,
-            `${concertData?.location?.postalCode} ${concertData?.location?.city}`,
-          ])}
+          {@render concertDetailRow(
+            "Ort",
+            concertData?.location
+              ? [
+                  concertData?.location?.name,
+                  concertData?.location?.address,
+                  `${concertData?.location?.postalCode} ${concertData?.location?.city}`,
+                ]
+              : null,
+          )}
           {#if concertData?.abendkasse || concertData?.tickets}
             <tr>
               <td style="font-weight: bold; text-align: center; font-size: larger;">Tickets</td>

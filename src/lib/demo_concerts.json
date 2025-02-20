@@ -35,17 +35,8 @@
   },
   {
     "_id": "banane3",
-    "name": "",
+    "name": "Privat",
     "date": "2025-06-28T15:00:00.000Z",
-    "location": {
-      "_id": "apfel3",
-      "name": "???",
-      "address": "???",
-      "city": "Lauchhammer",
-      "postalCode": "01979",
-      "country": "Deutschland",
-      "province": "Sachsen"
-    },
     "notes": ["Geschlossene Veranstaltung"]
   },
   {
