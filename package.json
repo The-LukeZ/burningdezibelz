@@ -44,7 +44,7 @@
     "ky": "^1.7.4",
     "marked": "^15.0.6",
     "mongoose": "^8.9.5",
-    "rate-limiter-flexible": "^5.0.4",
+    "rate-limiter-flexible": "^5.0.5",
     "uuid": "^11.0.3"
   }
 }
