@@ -1,7 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@import 'tailwindcss';
+
+@plugin "daisyui" {
+  themes: coffee --default;
+  prefix: "dy-";
+}
 
 @layer base {
   html {
