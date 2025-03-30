@@ -1,5 +1,4 @@
-<script>
-  import Footer from "$lib/components/Footer.svelte";
+<script lang="ts">
   import Navbar from "$lib/components/Navbar.svelte";
   import SectionWrapper from "$lib/components/SectionWrapper.svelte";
   import dayjs from "dayjs";
@@ -19,7 +18,7 @@
 
 <!-- <div class="z-[-1] h-[2000px] bg-linear-to-b from-black to-transparent opacity-90"></div> -->
 
-{#snippet concertRow(/** @type {DBModels.Concert} */ concert, /** @type {number} */ i)}
+{#snippet concertRow(concert: DBModels.Concert, i: number)}
   <tr class="dy-hover content-center items-center">
     <td class="hidden w-10 text-center lg:table-cell">{i + 1}</td>
     <td class="dy-link text-center text-lg font-bold text-primary md:dy-link-hover">
@@ -59,7 +58,7 @@
       </div>
     </SectionWrapper>
 
-    {#snippet bandMemberWTooltip(/** @type {string} */ name, /** @type {string[]} */ roles)}
+    {#snippet bandMemberWTooltip(name: string, roles: string[])}
       <span
         class="dy-tooltip dy-tooltip-info underline decoration-dotted underline-offset-4 duration-[50ms]"
         data-tip={roles.join(" & ")}

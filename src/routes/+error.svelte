@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { page } from "$app/state";
 </script>
 
@@ -6,6 +6,6 @@
   <img
     src="https://http.cat/{page.status}"
     alt="{page.status} {page.error.message}"
-    class="size-fit rounded-xl shadow-lg shadow-primary-content"
+    class="shadow-primary-content size-fit rounded-xl shadow-lg"
   />
 </div>

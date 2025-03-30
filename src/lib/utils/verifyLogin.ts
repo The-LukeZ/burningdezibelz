@@ -2,22 +2,17 @@ import { LoginSession } from "$lib/models/loginSession";
 import { JWT_SECRET } from "$env/static/private";
 import dayjs from "dayjs";
 import jwt from "jsonwebtoken";
+import type { Cookies } from "@sveltejs/kit";
 
-/**
- *
- * @param {import("@sveltejs/kit").Cookies} cookies
- * @returns
- */
-export default async function verifyLogin(cookies) {
+export default async function verifyLogin(cookies: Cookies) {
   const auth_token = cookies.get("auth_token");
   if (!auth_token) {
     return { status: 404 };
   }
 
-  /** @type {object} */
-  let decoded;
+  let decoded: jwt.JwtPayload;
   try {
-    decoded = jwt.verify(auth_token, JWT_SECRET, { algorithms: ["HS256"] });
+    decoded = jwt.verify(auth_token, JWT_SECRET, { algorithms: ["HS256"] }) as jwt.JwtPayload;
   } catch (err) {
     console.error("Error while verifying jwt", err);
     return { status: 400 };
@@ -38,10 +33,6 @@ export default async function verifyLogin(cookies) {
   }
 }
 
-/**
- * Verify if the response status is OK
- * @param {number} status
- */
-export function responseOK(status) {
+export function responseOK(status: number) {
   return status >= 200 && status < 300;
 }

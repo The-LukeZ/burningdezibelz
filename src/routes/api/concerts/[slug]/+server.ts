@@ -3,7 +3,6 @@ import { RateLimiterMemory, RateLimiterRes } from "rate-limiter-flexible";
 
 let ratelimter = new RateLimiterMemory({ duration: 5, points: 5, blockDuration: 15 });
 
-/** @type {import('./$types').RequestHandler} */
 export async function GET({ params, getClientAddress }) {
   try {
     await ratelimter.consume(getClientAddress(), 1);

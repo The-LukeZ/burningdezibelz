@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
   import { enhance } from "$app/forms";
-  import Footer from "$lib/components/Footer.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
   import SiteHeader from "$lib/components/SiteHeader.svelte";
   import { onMount } from "svelte";

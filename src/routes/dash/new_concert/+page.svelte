@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import { enhance } from "$app/forms";
   import Navbar from "$lib/components/Navbar.svelte";
   import SiteHeader from "$lib/components/SiteHeader.svelte";
-  import { onMount } from "svelte";
-  import ky from "ky";
   import { stringifyLocation } from "$lib/utils/location";
+  import ky from "ky";
+  import { onMount } from "svelte";
 
   let inputValue = $state("");
 

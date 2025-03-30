@@ -1,6 +1,6 @@
-import { model, Schema } from "mongoose";
+import { Model, model, Schema } from "mongoose";
 
-const locationSchema = new Schema({
+const locationSchema = new Schema<DBModels.Location>({
   name: { type: String, required: true, text: true },
   address: { type: String, required: true },
   city: { type: String, required: true },
@@ -11,14 +11,11 @@ const locationSchema = new Schema({
 
 locationSchema.index({ name: 1, address: 1, city: 1, postalCode: 1, province: 1, country: 1 }, { unique: true });
 
-/**
- * @type {import("mongoose").Model}
- */
-let Location;
+let Location: Model<DBModels.Location>;
 try {
-  Location = model("Location");
+  Location = model<DBModels.Location>("Location");
 } catch {
-  Location = model("Location", locationSchema, "locations");
+  Location = model<DBModels.Location>("Location", locationSchema, "locations");
 }
 
 export { locationSchema, Location };

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { goto } from "$app/navigation";
   import Navbar from "$lib/components/Navbar.svelte";
   import SiteHeader from "$lib/components/SiteHeader.svelte";
@@ -74,7 +74,7 @@
           >
         </div>
       </td>
-      <td class="dy-link text-center text-sm font-bold text-primary md:dy-link-hover md:text-lg">
+      <td class="dy-link text-primary md:dy-link-hover text-center text-sm font-bold md:text-lg">
         {#if concert.link}
           <a href={concert.link} class="dy-link-hover dy-link" target="_blank">{concert.name}</a>
         {:else}
@@ -116,8 +116,8 @@
     <span class="dy-loading dy-loading-spinner dy-loading-lg"></span>
   {:then concerts}
     <div class="w-full overflow-x-auto lg:p-5">
-      <table class="table-zebra table w-full table-auto overflow-x-auto border border-base-300 shadow-md">
-        <thead class="h-fit border-b border-primary p-5">
+      <table class="table-zebra border-base-300 table w-full table-auto overflow-x-auto border shadow-md">
+        <thead class="border-primary h-fit border-b p-5">
           <tr>
             <th class="hidden lg:table-cell">ID</th>
             <th>Name</th>
@@ -139,7 +139,7 @@
   <dialog id="choice_modal" class="dy-modal dy-modal-bottom sm:dy-modal-middle">
     <div class="dy-modal-box">
       <form method="dialog">
-        <button class="dy-btn dy-btn-square absolute right-4 top-4">
+        <button class="dy-btn dy-btn-square absolute top-4 right-4">
           <img src="/cross.svg" alt="X" class="dy-btn dy-btn-md" />
         </button>
       </form>

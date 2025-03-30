@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { page } from "$app/state";
   import { PUBLIC_BASE_URL } from "$env/static/public";
 

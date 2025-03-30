@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
   import { onMount } from "svelte";
@@ -80,7 +80,7 @@
   </button>
 {/snippet}
 
-<header class="sticky left-0 right-0 top-0 z-1000 shadow-xl backdrop-blur-2xl transition-transform duration-300 ease-in-out">
+<header class="sticky top-0 right-0 left-0 z-1000 shadow-xl backdrop-blur-2xl transition-transform duration-300 ease-in-out">
   <div class="mx-auto flex w-full max-w-[1400px] items-center justify-between p-4">
     <a href="/">
       <h1 class="dy-btn dy-btn-ghost text-xl font-bold md:text-2xl">Burning Dezibelz</h1>
@@ -124,7 +124,7 @@
   <dialog id="mobile_navbar" class="dy-modal">
     <div class="dy-modal-box">
       <form method="dialog" onsubmit={toggleNavbar}>
-        <div class="absolute right-4 top-4">
+        <div class="absolute top-4 right-4">
           <XButton stroke="white" />
         </div>
       </form>

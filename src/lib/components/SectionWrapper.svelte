@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   let { children, id = "" } = $props();
 </script>
 

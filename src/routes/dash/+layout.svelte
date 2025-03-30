@@ -1,6 +1,5 @@
-<script>
+<script lang="ts">
   import EmbedInfo from "$lib/components/EmbedInfo.svelte";
-  import Footer from "$lib/components/Footer.svelte";
 
   let { children } = $props();
 </script>

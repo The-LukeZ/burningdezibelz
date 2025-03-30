@@ -1,8 +1,6 @@
-import { getDate } from "$lib/utils/utilityFuncs";
+import dayjs from "dayjs";
 
 export async function load() {
-  const _data = getDate();
-  return {
-    ..._data,
-  };
+  const _date = dayjs().toDate();
+  return { ..._date };
 }

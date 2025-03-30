@@ -1,14 +1,14 @@
-<script>
+<script lang="ts">
   import { goto } from "$app/navigation";
   import { page } from "$app/state";
-  import { slide } from "svelte/transition";
-  import XButton from "$lib/components/XButton.svelte";
-  import Navbar from "$lib/components/Navbar.svelte";
   import ExternalLinkIcon from "$lib/components/ExternalLinkIcon.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
   import SiteHeader from "$lib/components/SiteHeader.svelte";
+  import XButton from "$lib/components/XButton.svelte";
+  import { prettyURL } from "$lib/utils/utilityFuncs.js";
   import dayjs from "dayjs";
   import ky from "ky";
-  import { prettyURL } from "$lib/utils/utilityFuncs.js";
+  import { slide } from "svelte/transition";
 
   /**
    * @type {"new" | "old"}
@@ -99,7 +99,7 @@
 
 <Navbar />
 
-<div class="fixed left-0 right-0 top-0 z-[-1] min-h-screen bg-linear-to-b from-black to-transparent"></div>
+<div class="fixed top-0 right-0 left-0 z-[-1] min-h-screen bg-linear-to-b from-black to-transparent"></div>
 
 <SiteHeader text="Konzerte" />
 
@@ -108,7 +108,7 @@
     <td class="concertTableCell w-[35%]">{dayjs(concert.date).toDate().toLocaleDateString("de", { dateStyle: "full" })}</td>
     <td class="concertTableCell w-[40%]">
       <div class="dy-tooltip-buttom dy-tooltip dy-tooltip-info" data-tip={prettyURL(concert.link)}>
-        <a class="dy-link-hover dy-link text-lg font-bold text-primary md:dy-link-hover" href={concert.link} target="_blank">
+        <a class="dy-link-hover dy-link text-primary md:dy-link-hover text-lg font-bold" href={concert.link} target="_blank">
           {concert.name}
         </a>
       </div>

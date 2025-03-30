@@ -1,6 +1,6 @@
 <!-- Button with X in the middle -->
 
-<script>
+<script lang="ts">
   const { stroke = "currentColor", buttonText = "" } = $props();
 </script>
 

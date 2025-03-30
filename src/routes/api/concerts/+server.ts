@@ -4,7 +4,6 @@ import { RateLimiterMemory, RateLimiterRes } from "rate-limiter-flexible";
 
 let ratelimter = new RateLimiterMemory({ duration: 5, points: 5, blockDuration: 30 });
 
-/** @type {import('./$types').RequestHandler} */
 export async function GET({ url, getClientAddress }) {
   try {
     await ratelimter.consume(getClientAddress(), 1);
@@ -26,15 +25,12 @@ export async function GET({ url, getClientAddress }) {
 
   const nowTs = dayjs();
 
-  /**
-   * @type {any}
-   */
   const params = {
-    search: url.searchParams.get("search"),
+    search: url.searchParams.get("search") || "",
     before: url.searchParams.get("before"),
     after: url.searchParams.get("after") || nowTs,
-    skip: parseInt(url.searchParams.get("skip")),
-    limit: parseInt(url.searchParams.get("limit")),
+    skip: parseInt(url.searchParams.get("skip") || "0"),
+    limit: parseInt(url.searchParams.get("limit") || "100"),
   };
 
   if (params.search) {

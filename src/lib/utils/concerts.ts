@@ -1,22 +1,14 @@
-import { Concert, concertSchema } from "../models/concert";
-import demoConcerts from "$lib/demo_concerts.json";
+import { Concert } from "../models/concert";
+const rawConcerts = (await import("$lib/demo_concerts.json")).default;
+const concerts = rawConcerts.map((concert) => ({
+  ...concert,
+  date: new Date(concert.date).toISOString(),
+})) as any as DBModels.Concert[];
 
-/**
- *
- * @returns {Promise<DBModels.Concert[]>}
- */
 export async function fetchConcerts() {
-  return demoConcerts.sort((a, b) => a.date.localeCompare(b.date)); // sort by date
+  return (concerts).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()); // sort by date
 }
 
-export function fetchConcertById(id) {
+export function fetchConcertById(id: string) {
   return Concert.findById(id);
-}
-
-/**
- *
- * @param {concertSchema} data
- */
-export function createConcert(data) {
-  return Concert.create(data);
 }

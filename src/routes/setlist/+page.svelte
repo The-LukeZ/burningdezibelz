@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Navbar from "$lib/components/Navbar.svelte";
   let { data } = $props();
   let songs = data.songs;

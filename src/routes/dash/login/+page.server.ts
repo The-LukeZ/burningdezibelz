@@ -34,7 +34,7 @@ export const actions = {
       let encryptedData = encryptIP(getClientAddress(), DB_SECRET);
       console.log("encryptedData", encryptedData);
       session = await LoginSession.create({ ipHash: encryptedData.encryptedIP, iv: encryptedData.iv });
-      encryptedData = undefined;
+      encryptedData = { iv: '$$$', encryptedIP: '$$$' }; // Clear sensitive data while maintaining type
     } catch (e) {
       console.error("Error creating session", e);
       return redirect(300, "/dash/login");

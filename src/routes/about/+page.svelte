@@ -1,5 +1,4 @@
-<script>
-  import Footer from "$lib/components/Footer.svelte";
+<script lang="ts">
   import Navbar from "$lib/components/Navbar.svelte";
   import PWrapper from "$lib/components/PWrapper.svelte";
   import SiteHeader from "$lib/components/SiteHeader.svelte";
@@ -63,15 +62,15 @@
 <div class="container flex max-w-[1500px] flex-col self-center">
   <div class="flex flex-col lg:flex-row-reverse">
     <!-- Bild -->
-    <div class="container relative mx-8 w-full self-center p-5 lg:max-w-[50%]">
+    <div class="relative container mx-8 w-full self-center p-5 lg:max-w-[50%]">
       <img src="/burningdezibelz_logo.png" alt="Band-Logo" class="mx-auto w-full rounded-2xl object-contain" />
-      <div class="visible absolute bottom-5 right-5 rounded-xs bg-transparent bg-opacity-50 px-2 py-1 italic text-slate-300">
+      <div class="bg-opacity-50 visible absolute right-5 bottom-5 rounded-xs bg-transparent px-2 py-1 text-slate-300 italic">
         Dieses Bild ist noch in Arbeit...
       </div>
     </div>
 
     <!-- Text -->
-    <section class="w-full self-center p-5 text-center text-base-content lg:w-1/2">
+    <section class="text-base-content w-full self-center p-5 text-center lg:w-1/2">
       <h1 id="die-band" class="mb-4 text-2xl font-bold underline"><a href="#die-band">Die Band</a></h1>
       <PWrapper>
         Die Band wurde 2023 in Zwickau gegründet. Wir spezialisieren uns seitdem auf Rock und Metal und spielten am 21.12.2023 im <a
@@ -100,7 +99,7 @@
     <div
       id={encodeURIComponent(name)}
       transition:fade
-      class="dy-card max-w-[300px] flex-none overflow-hidden bg-secondary lg:transition lg:delay-[50ms] lg:ease-in-out lg:hover:-translate-y-1 lg:hover:scale-[101%]"
+      class="dy-card bg-secondary max-w-[300px] flex-none overflow-hidden lg:transition lg:delay-[50ms] lg:ease-in-out lg:hover:-translate-y-1 lg:hover:scale-[101%]"
     >
       <div class="pointer-events-none absolute inset-0 -m-1"></div>
       <figure><img src={image} alt={name} /></figure>
@@ -127,7 +126,7 @@
   <dialog id={"memberDetails-" + encodeURIComponent(memberDetails.name)} class="dy-modal">
     <div class="dy-modal-box max-w-[1000px]">
       <form method="dialog" onsubmit={eradicateMemberDetails}>
-        <button class="dy-btn dy-btn-square absolute right-4 top-4">
+        <button class="dy-btn dy-btn-square absolute top-4 right-4">
           <img src="/cross.svg" alt="X" class="dy-btn dy-btn-md" />
         </button>
       </form>

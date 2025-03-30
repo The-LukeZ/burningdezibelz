@@ -1,20 +1,17 @@
-import { model, Schema } from "mongoose";
+import { Model, model, Schema } from "mongoose";
 
-const concertSchema = new Schema({
+const concertSchema = new Schema<DBModels.Concert>({
   name: { type: String, required: true },
   link: { type: String, required: true },
   date: { type: Date, required: true, unique: true },
   location: { type: Schema.Types.ObjectId, required: true },
 });
 
-/**
- * @type {import("mongoose").Model}
- */
-let Concert;
+let Concert: Model<DBModels.Concert>;
 try {
-  Concert = model("Concert");
+  Concert = model<DBModels.Concert>("Concert");
 } catch {
-  Concert = model("Concert", concertSchema, "concerts");
+  Concert = model<DBModels.Concert>("Concert", concertSchema, "concerts");
 }
 
 export { concertSchema, Concert };

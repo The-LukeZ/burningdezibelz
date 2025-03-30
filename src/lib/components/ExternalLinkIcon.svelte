@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   /**
    * @typedef Props
    * @prop {number} [sizeMultiplier] - The size multiplier for the icon | Default: `1`

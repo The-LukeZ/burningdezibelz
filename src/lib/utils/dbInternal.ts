@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import { DB_URL, NODE_ENV } from "$env/static/private";
+import { building } from "$app/environment";
 
 /**
  * Connection ready state
@@ -10,11 +11,11 @@ import { DB_URL, NODE_ENV } from "$env/static/private";
  * - 3 = disconnecting
  * - 99 = uninitialized
  */
-const mongoConnection = {
-  isConnected: 0,
-};
+const mongoConnection = { isConnected: 0 };
 
 export async function dbConnect() {
+  if (building) return;
+
   console.log("DB_URL", DB_URL);
   if (mongoConnection.isConnected === 1) {
     console.log("already connected");
