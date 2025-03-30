@@ -2,21 +2,23 @@
 // for information about these interfaces
 declare global {
   namespace App {
-    interface Error {}
+    interface Error {
+      message: string;
+      status: number;
+    }
 
     interface Locals {
       loggedIn: boolean;
       year: number;
     }
 
-    // interface PageData {
-    //   date?: Date;
-    //   year?: number;
-    // }
+    interface PageData {
+      date?: Date;
+    }
 
-    interface PageState {}
+    // interface PageState {}
 
-    interface Platform {}
+    // interface Platform {}
   }
 
   namespace DBModels {
@@ -33,7 +35,7 @@ declare global {
     interface Concert {
       _id: string;
       name: string;
-      date: string;
+      date: Date;
       link?: string;
       location?: Location;
       /**
@@ -43,6 +45,14 @@ declare global {
       abendkasse?: boolean;
       price?: number;
       notes?: string[];
+    }
+
+    interface LoginSession {
+      ipHash: string;
+      iv: string;
+      valid: boolean;
+      createdAt: NativeDate;
+      updatedAt: NativeDate;
     }
   }
 }
