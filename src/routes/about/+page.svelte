@@ -65,7 +65,7 @@
     <!-- Bild -->
     <div class="container relative mx-8 w-full self-center p-5 lg:max-w-[50%]">
       <img src="/burningdezibelz_logo.png" alt="Band-Logo" class="mx-auto w-full rounded-2xl object-contain" />
-      <div class="visible absolute bottom-5 right-5 rounded-sm bg-transparent bg-opacity-50 px-2 py-1 italic text-slate-300">
+      <div class="visible absolute bottom-5 right-5 rounded-xs bg-transparent bg-opacity-50 px-2 py-1 italic text-slate-300">
         Dieses Bild ist noch in Arbeit...
       </div>
     </div>

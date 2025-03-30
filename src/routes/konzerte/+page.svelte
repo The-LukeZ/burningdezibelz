@@ -99,7 +99,7 @@
 
 <Navbar />
 
-<div class="fixed left-0 right-0 top-0 z-[-1] min-h-screen bg-gradient-to-b from-black to-transparent"></div>
+<div class="fixed left-0 right-0 top-0 z-[-1] min-h-screen bg-linear-to-b from-black to-transparent"></div>
 
 <SiteHeader text="Konzerte" />
 

@@ -80,7 +80,7 @@
   </button>
 {/snippet}
 
-<header class="sticky left-0 right-0 top-0 z-[1000] shadow-xl backdrop-blur-2xl transition-transform duration-300 ease-in-out">
+<header class="sticky left-0 right-0 top-0 z-1000 shadow-xl backdrop-blur-2xl transition-transform duration-300 ease-in-out">
   <div class="mx-auto flex w-full max-w-[1400px] items-center justify-between p-4">
     <a href="/">
       <h1 class="dy-btn dy-btn-ghost text-xl font-bold md:text-2xl">Burning Dezibelz</h1>

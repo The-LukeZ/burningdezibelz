@@ -17,7 +17,7 @@
   <img src="/burningdezibelz_logo.png" alt="Band Banner" class="mx-auto max-h-screen w-full object-contain" />
 </div>
 
-<!-- <div class="z-[-1] h-[2000px] bg-gradient-to-b from-black to-transparent opacity-90"></div> -->
+<!-- <div class="z-[-1] h-[2000px] bg-linear-to-b from-black to-transparent opacity-90"></div> -->
 
 {#snippet concertRow(/** @type {DBModels.Concert} */ concert, /** @type {number} */ i)}
   <tr class="dy-hover content-center items-center">
@@ -36,7 +36,7 @@
   </tr>
 {/snippet}
 
-<div id="gradient-start-point" class="relative w-full bg-gradient-to-b from-black to-transparent">
+<div id="gradient-start-point" class="relative w-full bg-linear-to-b from-black to-transparent">
   <main class="container mx-auto flex flex-col">
     <SectionWrapper id="upcoming-concerts">
       <div class="p-5">
@@ -80,7 +80,7 @@
         <!-- <img
         src="https://picsum.photos/1920/1080"
         alt="Die Band im Bandraum (Jan, Robert, Micha, Luca)"
-        class="z-auto mx-auto w-[90%] max-w-[90%] rounded-[10px] hover:z-[1] hover:drop-shadow-lg"
+        class="z-auto mx-auto w-[90%] max-w-[90%] rounded-[10px] hover:z-1 hover:drop-shadow-lg"
       /> -->
         <div class="dy-skeleton flex h-[256px] w-full items-center justify-center shadow-md lg:w-[70%]">
           <p class="mx-auto text-center italic">Bild ist noch in Arbeit...<br />Habt Geduld...</p>
