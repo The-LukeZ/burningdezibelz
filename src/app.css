@@ -1,8 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: coffee --default;
+  theme: coffee --default;
   prefix: "dy-";
+}
+
+@theme {
+  --font-thin: 0.5rem;
 }
 
 @layer base {
