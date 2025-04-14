@@ -37,7 +37,7 @@
     "vite": "^6.1.0"
   },
   "dependencies": {
-    "@lucide/svelte": "^0.479.0",
+    "@lucide/svelte": "^0.488.0",
     "dayjs": "^1.11.13",
     "jsonwebtoken": "^9.0.2",
     "ky": "^1.7.4",
